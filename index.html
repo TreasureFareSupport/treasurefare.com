@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasurfare | Coming Soon</title>
+    <style>
+        :root {
+            --bg-color: #fdfdfd;
+            --text-main: #1a1a1a;
+            --text-muted: #595959;
+            --accent: #2e4a62;
+            --border: #e1e1e1;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 640px;
+            padding: 40px 30px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .notice {
+            display: inline-block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            font-weight: 600;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 4px;
+            margin-bottom: 24px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            font-family: var(--font-stack);
+            font-size: 1rem;
+            background-color: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            color: var(--text-main);
+            transition: border-color 0.2s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            background-color: var(--text-main);
+            color: #ffffff;
+            border: none;
+            padding: 14px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            align-self: flex-start;
+        }
+
+        button:hover {
+            background-color: var(--accent);
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 10px;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Treasurfare</h1> 
+            <p class="notice">Full‑Service Estate &amp; Transition Management</p>
+            <p class="description">We specialize in estate sales, curated auctions, senior downsizing, business asset dispersal, and complete home‑contents management.</p>
+            <p class="description">Our mission is to help families, seniors, and organizations navigate major life or operational changes by sorting, cataloging, valuing, staging, marketing, and coordinating the sale or rehoming of personal and commercial property.</p>
+            <p class="description">Our primary web portal is currently being updated. To schedule an initial consultation, request a property evaluation, or speak with our transitions team, please utilize the secure inquiry terminal below.</p>
+        </header>
+
+        <main>
+            <!-- Generic Formspree endpoint -->
+            <form action="https://formspree.io/f/" method="POST">
+                <div class="form-group">
+                    <label for="name">Contact Name / Organization</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="_replyto" required autocomplete="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message / Scope of Inquiry</label>
+                    <textarea id="message" name="message" placeholder="Please detail your request here..." required></textarea>
+                </div>
+
+                <input type="hidden" name="_subject" value="New Inquiry from Treasurfare Hub">
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Treasurfare. All rights reserved. Secure Portal Entry.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
