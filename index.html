@@ -42,6 +42,19 @@
             margin-bottom: 50px;
         }
 
+        /* Added alignment rule to keep image columns perfectly balanced */
+        .image-stack {
+            flex: 1;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        header {
+            flex: 1;
+        }
+
         header h1 {
             font-size: 2.2rem;
             font-weight: 700;
@@ -121,11 +134,15 @@
             color: var(--text-muted);
             border-top: 1px solid var(--border);
             padding-top: 20px;
+            text-align: center;
         }
 
         @media (max-width: 700px) {
             .top-section {
                 flex-direction: column;
+            }
+            .image-stack {
+                max-width: 100%;
             }
         }
     </style>
@@ -137,18 +154,20 @@
 
     <div class="top-section">
 
-        <div>
-            <img src="herend.png"
-                 width="420"
-                 style="border-radius: 6px;">
+        <!-- Left Column: Curated Asset Showcase Stack -->
+        <div class="image-stack">
+            <img src="herend.png" style="border-radius: 6px; width: 100%; height: auto; display: block;">
+            <img src="chair.jpg" style="border-radius: 6px; width: 100%; height: auto; display: block;">
+            <img src="PeeWee1-FamousBike.jpg" style="border-radius: 6px; width: 100%; height: auto; display: block;">
         </div>
 
-       <header>
-    <img src="TFlogo.png" style="max-width: 550px; width: 100%; height: auto; margin-bottom: 25px; display: block;">
-    <p class="description">We specialize in estate sales, curated auctions, senior downsizing, business asset dispersal, and complete home‑contents management.</p>
-    <p class="description">Our mission is to help families, seniors, and organizations navigate major life or operational changes by sorting, cataloging, valuing, staging, marketing, and coordinating the sale or rehoming of personal and commercial property.</p>
-    <p class="description">To schedule an initial consultation, request a property evaluation, or speak with our transitions team, please utilize the secure inquiry terminal below.</p>
-</header>
+        <!-- Right Column: Main Logo & Content -->
+        <header>
+            <img src="TFlogo.png" style="max-width: 550px; width: 100%; height: auto; margin-bottom: 25px; display: block;">
+            <p class="description">We specialize in estate sales, curated auctions, senior downsizing, business asset dispersal, and complete home‑contents management.</p>
+            <p class="description">Our mission is to help families, seniors, and organizations navigate major life or operational changes by sorting, cataloging, valuing, staging, marketing, and coordinating the sale or rehoming of personal and commercial property.</p>
+            <p class="description">To schedule an initial consultation, request a property evaluation, or speak with our transitions team, please utilize the secure inquiry terminal below.</p>
+        </header>
 
     </div>
 
@@ -175,7 +194,8 @@
         </form>
     </main>
 
-    <footer><img src="TFlogo.png" width="200" style="display: block; margin: 0 auto 15px auto;">
+    <footer>
+        <img src="TFlogo.png" width="200" style="display: block; margin: 0 auto 15px auto;">
         <p>&copy; 2026 TreasureFare. All rights reserved. Secure Portal Entry.</p>
     </footer>
 
